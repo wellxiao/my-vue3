@@ -66,7 +66,7 @@ export default {
             console.log('onBeforeUpdate')
         })
         onUpdated(() => {
-            console.log('onUpdated')s
+            console.log('onUpdated')
         })
 
 
