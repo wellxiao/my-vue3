@@ -1,7 +1,7 @@
 <template>
   <div>
     <router-view></router-view>
-    <hello-world msg="Hello Vue 3.0 + Vite" />
+    <!-- <hello-world msg="Hello Vue 3.0 + Vite" /> -->
   </div>
 </template>
 

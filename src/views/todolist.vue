@@ -26,13 +26,11 @@
 </template>
 <script lang="ts">
 // 在vue2中 data 在vue3中使用 reactive代替
-import { reactive, computed } from 'vue'
+import { reactive, computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 export default {
     // setup相当于vue2.0的 beforeCreate和 created，是vue3新增的一个属性，所有的操作都在此属性中完成
     setup(props, context) {
-        console.log(props, context)
-        console.log('888888888')
         // 通过reactive 可以初始化一个可响应的数据，与Vue2.0中的Vue.observer很相似
         const state = reactive({
             todoList: [
@@ -53,6 +51,10 @@ export default {
                 },
             ],
             todo: '',
+        })
+
+        onMounted(()=>{
+            console.log('生命周期mounted')
         })
         // 使用计算属性生成待办列表
         const todos = computed(() => {
